@@ -2,30 +2,29 @@
 
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'plugin:react-hooks/recommended',
-  ],
+  env: {
+    browser: true,
+    es2020: true
+  },
+  extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:@typescript-eslint/recommended-requiring-type-checking", "plugin:react-hooks/recommended", "plugin:storybook/recommended"],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: true,
-    tsconfigRootDir: __dirname,
+    tsconfigRootDir: __dirname
   },
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': ['warn', {
+      allowConstantExport: true
+    }],
     "@typescript-eslint/no-non-null-assertion": 'off',
-    "no-empty-pattern": 'true',
+    "no-empty-pattern": "true",
     "quotes": ["error", "single"],
-    "indent": ["error", , { "SwitchCase": 1 }],
+    "indent": ["error",, {
+      "SwitchCase": 1
+    }],
     "no-multiple-empty-lines": "error"
-  },
-}
+  }
+};
